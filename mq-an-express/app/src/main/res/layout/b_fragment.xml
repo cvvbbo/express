@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/returnIm_rl"
+            android:layout_width="@dimen/y40"
+            android:layout_height="@dimen/y30">
+
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/returnIm"
+                android:layout_width="@dimen/x9"
+                android:layout_height="@dimen/x19"
+                android:src="@drawable/return_im" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:layout_centerInParent="true"
+            android:id="@+id/searchview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="完善信息"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/x14"
+        android:layout_marginTop="@dimen/x24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/x23"
+            android:id="@+id/tv_express"
+            android:textColor="@color/text_color"
+            android:text="*运单编号"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x19" />
+
+        <EditText
+            android:textSize="15sp"
+            android:hint="请输入运单号"
+            android:layout_marginLeft="@dimen/x18"
+            android:id="@+id/express_num"
+            android:background="@null"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/x19"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/clear_im" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/x3"
+            android:id="@+id/clear_im"
+            android:layout_marginRight="@dimen/x19"
+            android:layout_toLeftOf="@+id/scan_qr"
+            android:src="@drawable/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x14" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/x3"
+            android:layout_marginRight="@dimen/x23"
+            android:id="@+id/scan_qr"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/scan_qr"
+            android:layout_width="@dimen/y13"
+            android:layout_height="@dimen/x14" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_marginRight="@dimen/x23"
+            android:layout_marginLeft="@dimen/x23"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_below="@+id/scan_qr"
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"/>
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/x131"
+            android:layout_marginTop="@dimen/y6"
+            android:id="@+id/express_content_more"
+            android:layout_below="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:id="@+id/tv1"
+                android:text="运单详情"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x15" />
+
+            <ImageView
+                android:paddingTop="6dp"
+                android:paddingBottom="4dp"
+                android:layout_toRightOf="@+id/tv1"
+                android:id="@+id/im1"
+                android:src="@drawable/pull_im"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x15" />
+
+
+        </RelativeLayout>
+
+
+        <!--这个就是能够定义自适应宽高的listview-->
+        <com.emiaoqian.express.views.XiongListview
+            android:background="@color/line_color2"
+            android:visibility="gone"
+            android:id="@+id/express_detailed_list"
+            android:layout_below="@id/express_content_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/big_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y19">
+        
+
+        <TextView
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_marginLeft="@dimen/x131"
+            android:id="@+id/tv2"
+            android:text="选择代收人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="@dimen/y9"
+            android:layout_marginLeft="@dimen/x90"
+            android:background="@color/line_color1"
+            android:id="@+id/v1"
+            android:layout_width="@dimen/x36"
+            android:layout_height="2dp"/>
+
+
+        <View
+            android:layout_marginTop="@dimen/y9"
+            android:layout_marginLeft="@dimen/x4"
+            android:layout_toRightOf="@+id/tv2"
+            android:background="@color/line_color1"
+            android:id="@+id/v2"
+            android:layout_width="@dimen/x36"
+            android:layout_height="2dp"/>
+
+
+    </RelativeLayout>
+
+
+    <com.emiaoqian.express.views.FlowLayout1
+        android:layout_marginRight="@dimen/y2"
+        android:layout_marginLeft="@dimen/x6"
+        android:layout_marginTop="@dimen/x13"
+        android:layout_marginBottom="@dimen/x9"
+        android:layout_below="@+id/sign_people"
+        android:id="@+id/tag_vessel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/x9"
+            android:scaleType="centerInside"
+            android:background="@drawable/shape_tips1"
+            android:layout_marginTop="@dimen/x4"
+            android:id="@+id/add_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_im"
+             />
+
+    </com.emiaoqian.express.views.FlowLayout1>
+
+    <RelativeLayout
+        android:background="@color/big_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y19">
+
+
+
+        <TextView
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_marginLeft="@dimen/x131"
+            android:id="@+id/tv3"
+            android:text="收件人信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="@dimen/y9"
+            android:layout_marginLeft="@dimen/x90"
+            android:background="@color/line_color1"
+            android:id="@+id/v3"
+            android:layout_width="@dimen/x36"
+            android:layout_height="2dp"/>
+
+
+        <View
+            android:layout_marginTop="@dimen/y9"
+            android:layout_marginLeft="@dimen/x4"
+            android:layout_toRightOf="@+id/tv3"
+            android:background="@color/line_color1"
+            android:id="@+id/v4"
+            android:layout_width="@dimen/x36"
+            android:layout_height="2dp"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/y9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/x23"
+            android:id="@+id/tv_phone_num"
+            android:textColor="@color/text_color"
+            android:text="*手机"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:singleLine="true"
+            android:hint="收件人手机号码（必填）"
+            android:background="@null"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="@dimen/x18"
+            android:layout_toRightOf="@+id/tv_phone_num"
+            android:id="@+id/phone_num"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+
+            android:layout_marginRight="@dimen/x23"
+            android:id="@+id/micophone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/identify_voice"
+            android:layout_width="@dimen/y26"
+            android:layout_height="@dimen/x14" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_marginRight="@dimen/x23"
+            android:layout_marginLeft="@dimen/x23"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_below="@+id/micophone"
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"/>
+
+
+
+        <TextView
+            android:layout_marginTop="@dimen/y9"
+            android:layout_below="@+id/line3"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/x29"
+            android:id="@+id/tv_receiver"
+            android:textColor="@color/text_color"
+            android:text="姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:singleLine="true"
+            android:hint="建议填写，方便核对"
+            android:textSize="15sp"
+            android:background="@null"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/y9"
+            android:layout_below="@+id/line3"
+            android:layout_marginLeft="@dimen/x18"
+            android:layout_toRightOf="@+id/tv_receiver"
+            android:id="@+id/receiver_name"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/x18" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/x13"
+            android:layout_below="@+id/line3"
+            android:layout_marginRight="@dimen/x23"
+            android:id="@+id/miconame"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/identify_voice"
+            android:layout_width="@dimen/y26"
+            android:layout_height="@dimen/x14" />
+
+
+
+
+        <View
+            android:id="@+id/line4"
+            android:layout_marginRight="@dimen/x23"
+            android:layout_marginLeft="@dimen/x23"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_below="@+id/tv_receiver"
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"/>
+
+
+
+    </RelativeLayout>
+    
+    
+    <TextView
+        android:layout_marginBottom="@dimen/x14"
+        android:id="@+id/next_tv"
+        android:layout_marginTop="@dimen/x9"
+        android:textColor="@android:color/white"
+        android:background="@drawable/shape_buttom"
+        android:gravity="center"
+        android:text="下一步"
+        android:layout_marginRight="@dimen/x22"
+        android:layout_marginLeft="@dimen/x22"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25" />
+
+
+
+
+</LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--这里的路径设置也和文件获取的路径有关-->
+    <!--https://www.cnblogs.com/shenchanghui/p/6955744.html-->
+    <!--https://blog.csdn.net/leilifengxingmw/article/details/57405908-->
+    <external-path name="images" path="test/"/>
+</paths>

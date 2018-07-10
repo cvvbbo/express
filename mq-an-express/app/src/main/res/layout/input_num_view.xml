@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:singleLine="true"
+        android:maxLines="1"
+        android:paddingRight="@dimen/x5"
+        android:paddingLeft="@dimen/x5"
+        android:layout_marginTop="@dimen/x36"
+        android:drawablePadding="@dimen/x10"
+        android:hint="输入运单号码/取件码"
+        android:layout_marginRight="@dimen/x23"
+        android:layout_marginLeft="@dimen/x23"
+        android:id="@+id/express_num"
+        android:background="@drawable/shape_input_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x36" />
+
+
+    <TextView
+        android:id="@+id/confirm_tv"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:background="@drawable/shape_buttom"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_below="@+id/express_num"
+        android:text="确认"
+        android:layout_width="@dimen/x102"
+        android:layout_height="@dimen/x37" />
+
+
+
+
+</RelativeLayout>

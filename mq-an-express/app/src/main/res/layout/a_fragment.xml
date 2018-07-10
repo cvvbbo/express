@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:src="@drawable/zoomin"
+        android:id="@+id/zoomin"
+        android:layout_marginTop="@dimen/y41"
+        android:layout_marginRight="@dimen/x13"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/x38"
+        android:layout_height="@dimen/x38" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/x20"
+        android:src="@drawable/zoomout"
+        android:layout_marginRight="@dimen/x13"
+        android:layout_below="@+id/zoomin"
+        android:id="@+id/zoomout"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/x38"
+        android:layout_height="@dimen/x38" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/x20"
+        android:layout_below="@+id/zoomin"
+        android:src="@drawable/my_location"
+        android:id="@+id/location_bt"
+        android:layout_width="@dimen/x38"
+        android:layout_height="@dimen/x38"
+        android:layout_marginLeft="@dimen/x13"
+        android:text="Location"/>
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <!--这个才是布局里面的颜色-->
+        <!--默认的toolbar的颜色也是这个-->
+        <item name="colorPrimary">@color/white</item>
+        <!--中间这个是标题栏的颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/black</item>
+
+
+    </style>
+
+
+    <style name="Mydialog" parent="android:style/Theme.Dialog">
+        <!-- 注意这里也有个天坑啊，背景不是background而是windowBackgroud -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <!--<item name="android:paddingLeft">30dp</item>-->
+        <!--<item name="android:paddingRight">30dp</item>-->
+        <!--<item name="android:paddingLeft">@dimen/x12</item>-->
+        <item name="android:layout_width">@dimen/x26</item>
+        <item name="android:layout_height">@dimen/x19</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/myToolbarStyle</item>
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+    </style>
+
+    <style name="myToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+
+    <!--这个是登录时候的dialog（为了等待，因为登录可能耗时）-->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <!--下面是友盟的（分享）-->
+    <!--<style name="ACPLDialog">-->
+    <!--<item name="android:windowFrame">@null</item>-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowIsFloating">true</item>-->
+    <!--<item name="android:windowContentOverlay">@null</item>-->
+    <!--</style>-->
+    <!--<style name="umeng_socialize_action_bar_itemlayout">-->
+    <!--<item name="android:layout_height">fill_parent</item>-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_weight">1</item>-->
+    <!--<item name="android:paddingLeft">4dp</item>-->
+    <!--<item name="android:paddingTop">4dp</item>-->
+    <!--<item name="android:paddingRight">4dp</item>-->
+    <!--<item name="android:gravity">center_vertical</item>-->
+    <!--</style>-->
+
+    <!--<style name="umeng_socialize_action_bar_item_im">-->
+    <!--<item name="android:layout_width">25dp</item>-->
+    <!--<item name="android:layout_height">25dp</item>-->
+    <!--<item name="android:scaleType">fitCenter</item>-->
+    <!--<item name="android:layout_centerVertical">true</item>-->
+    <!--</style>-->
+
+    <!--<style name="umeng_socialize_action_bar_item_tv">-->
+    <!--<item name="android:layout_width">wrap_content</item>-->
+    <!--<item name="android:layout_height">fill_parent</item>-->
+    <!--<item name="android:layout_marginLeft">5dp</item>-->
+    <!--<item name="android:text">999</item>-->
+    <!--<item name="android:gravity">center</item>-->
+    <!--<item name="android:textColor">#ffffff</item>-->
+    <!--<item name="android:textSize">12sp</item>-->
+    <!--<item name="android:textStyle">bold</item>-->
+    <!--</style>-->
+
+    <!--网页授权的布局-->
+    <style name="umeng_socialize_popup_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <!--<style name="Theme.UMDialog" parent="android:style/Theme.Dialog">-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--</style>-->
+
+    <style name="Theme.UMDefault" parent="android:style/Theme.NoTitleBar"></style>
+
+    <!--<style name="umeng_socialize_divider">-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_height">1dp</item>-->
+    <!--<item name="android:background">@color/umeng_socialize_divider</item>-->
+    <!--</style>-->
+
+    <!--<style name="umeng_socialize_list_item">-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_height">55dp</item>-->
+    <!--<item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>-->
+    <!--<item name="android:paddingBottom">5dp</item>-->
+    <!--<item name="android:paddingTop">5dp</item>-->
+    <!--</style>-->
+
+    <!--<style name="umeng_socialize_edit_padding">-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_height">fill_parent</item>-->
+    <!--<item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>-->
+    <!--<item name="android:layout_marginLeft">6dp</item>-->
+    <!--<item name="android:layout_marginRight">6dp</item>-->
+    <!--<item name="android:layout_marginTop">6dp</item>-->
+    <!--<item name="android:layout_marginBottom">6dp</item>-->
+    <!--</style>-->
+    <!--以上都是友盟的-->
+
+
+
+    <style name="BottomDialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <!--这个属性的dialog弹窗的系统暗色-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+
+
+
+
+</resources>

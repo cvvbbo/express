@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content" >
+
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:background="@color/style_color"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:text="添加新标签"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/x20"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/title"
+        android:id="@+id/id_label_your_name"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:text="新标签：" />
+
+    <EditText
+        android:layout_marginTop="@dimen/x20"
+        android:layout_below="@+id/title"
+        android:background="@null"
+        android:id="@+id/id_txt_your_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/id_label_your_name"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
+
+    <View
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/x40"
+        android:background="@color/style_color"
+        android:layout_toRightOf="@+id/id_label_your_name"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:id="@+id/view" />
+
+    <Button
+        android:paddingTop="@dimen/x10"
+        android:background="@null"
+        android:id="@+id/id_sure_edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:layout_alignTop="@+id/view"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:paddingTop="@dimen/x10"
+        android:layout_alignTop="@+id/view"
+        android:background="@null"
+        android:id="@+id/cancel_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/id_txt_your_name"
+        android:text="取消" />
+
+</RelativeLayout>

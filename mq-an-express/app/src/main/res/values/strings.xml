@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">快递加</string>
+
+
+
+    <!--<string-array name="tab_title">-->
+        <!--<item>火辣</item>-->
+        <!--<item>真人</item>-->
+        <!--<item>美女</item>-->
+        <!--<item>点我</item>-->
+        <!--<item>@null</item>-->
+    <!--</string-array>-->
+
+   <string-array name="tab_title">
+        <item>工作</item>
+        <item>资讯</item>
+        <item>权益</item>
+        <item>生活</item>
+        <item>@null</item>
+    </string-array>
+
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>en_us</item>
+    </string-array>
+
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+
+    <string name="pref_key_translate">translate</string>
+    <string name="pref_title_translate">翻译</string>
+
+
+    <string name="umeng_socialize_sharetosina">分享到新浪微博</string>
+    <string name="umeng_socialize_sharetodouban">分享到豆瓣</string>
+    <string name="umeng_socialize_sharetorenren">分享到人人网</string>
+
+    <string name="umeng_socialize_sharetotencent">分享到腾讯微博</string>
+    <string name="umeng_socialize_sharetotwitter">分享到twitter</string>
+    <string name="umeng_socialize_sharetolinkin">分享到领英</string>
+
+</resources>

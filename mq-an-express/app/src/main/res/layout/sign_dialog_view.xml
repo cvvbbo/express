@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x36">
+            <TextView
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快递员签名" />
+
+            <TextView
+                android:layout_marginRight="@dimen/x17"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/clear_tv"
+                android:textColor="@color/tab_layout_text_color"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清除" />
+
+            <RelativeLayout
+                android:id="@+id/close_im_rl"
+                android:layout_width="60dp"
+                android:layout_height="@dimen/x36">
+                <ImageView
+                    android:layout_marginLeft="@dimen/x22"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/close_im"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/close"
+                    android:layout_width="@dimen/x11"
+                    android:layout_height="@dimen/x11" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:background="@color/line_color2"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/signature_pad"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x239"
+                app:penColor="@android:color/black"
+                />
+
+            <TextView
+                android:textSize="12sp"
+                android:textColor="@color/text_color_hint"
+                android:id="@+id/tv"
+                android:layout_centerInParent="true"
+                android:text="签名后的存证更有效力"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:background="@color/buttom_color"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/confirm_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x34"
+                android:text="确定" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

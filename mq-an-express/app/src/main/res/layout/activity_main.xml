@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        tools:context="com.signsave.MainActivity">
+
+
+        <TextView
+            android:textSize="18dp"
+            android:text="基本信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/express_num"
+            android:text="物流单号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@null"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/express_num"
+            android:id="@+id/express_input"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/express_input"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/scan1"
+            android:id="@+id/scan_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/host_phone"
+            android:text="物主电话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/express_num"
+            />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:id="@+id/host_phone_input"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/express_num"
+            android:layout_toEndOf="@+id/express_num" />
+
+        <View
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/host_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <TextView
+            android:id="@+id/send_time_tv"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/host_phone"
+            android:layout_marginLeft="60dp"
+            android:text="送达时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:id="@+id/send_time"
+            android:layout_below="@+id/host_phone_input"
+            android:layout_toRightOf="@+id/express_num"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/send_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/send_time"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/sign_people"
+            android:textSize="18dp"
+            android:layout_below="@+id/line1"
+            android:text="签收人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/sign_people"
+            android:layout_below="@+id/line1"
+            android:text="自定义标签长按可删除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.emiaoqian.express.views.FlowLayout
+            android:layout_below="@+id/sign_people"
+            android:id="@+id/tag_vessel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:id="@+id/add_tag"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/add" />
+
+        </com.emiaoqian.express.views.FlowLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/tag_vessel"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/make_photo_tv"
+            android:textSize="18dp"
+            android:layout_below="@+id/line2"
+            android:text="拍照记录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_below="@+id/make_photo_tv"
+            android:id="@+id/left_ly"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="35dp"
+                android:id="@+id/front_id"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/up_identify" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/front_id1"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_below="@+id/make_photo_tv"
+            android:layout_toRightOf="@+id/left_ly"
+            android:id="@+id/right_ly"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/reverse_id"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/up_identify" />
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/reverse_id1"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/up_identify" />
+
+
+        </RelativeLayout>
+
+        <com.emiaoqian.express.views.MyImageview
+            android:id="@+id/myimage"
+            android:layout_toRightOf="@+id/left_ly"
+            android:layout_below="@+id/make_photo_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/left_ly"
+            android:text="请注意光线，保证包裹清晰可见"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:id="@+id/line3"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+        <TextView
+            android:id="@+id/make_voice_tv"
+            android:textSize="18dp"
+            android:layout_below="@+id/line3"
+            android:text="语音留言"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/line3"
+            android:text="按住说话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/recordBtn"
+            android:layout_marginTop="13dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/make_voice_tv"
+            android:src="@drawable/owq"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/recordBtn"
+            android:id="@+id/record_contentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            >
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                >
+                <ImageView
+                    android:id="@+id/record_detailView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="28dp"
+                    android:src="@drawable/gxx" />
+                <TextView
+                    android:text="60s"
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="50dp"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/next_tv"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/style_color"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_below="@+id/record_contentLayout"
+            android:text="下一步"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/ook"
+            android:layout_margin="8dp"
+            android:background="@color/style_color"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_below="@+id/record_contentLayout"
+            android:text="ok"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

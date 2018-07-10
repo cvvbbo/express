@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rool_rl"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_tb1"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30">
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/x13"
+            android:id="@+id/nouserl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:visibility="gone"
+                android:paddingBottom="@dimen/y5"
+                android:layout_centerVertical="true"
+                android:id="@+id/return_im"
+                android:layout_alignParentLeft="true"
+                android:layout_width="@dimen/x20"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="haha"
+                android:textColor="#000000"
+                />
+
+            <ImageView
+                android:visibility="gone"
+                android:paddingBottom="@dimen/x5"
+                android:id="@+id/imagebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="8dp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <!--android:isScrollContainer="true"-->
+            <com.emiaoqian.express.views.XiongViewPager
+                android:isScrollContainer="true"
+                android:id="@+id/vp"
+                android:layout_below="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/menu_list"/>
+
+        </LinearLayout>
+
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+
+
+</LinearLayout>
